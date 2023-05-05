@@ -16,8 +16,9 @@
         <li><a href="#">Activites</a></li>
         <li><a href="#">cooperatives</a></li>
         <li><a href="#">Activites</a></li>
-        <li><select>
-          <option value="Autre">  <a href="#">Autre services</a></option>
+        <li>
+           <a href="#">Autre services</a>
+        <select>
           <option value="c">  <a href="#">c</a></option>
           <option value="b">  <a href="#">b</a></option>
           <option value="a">  <a href="#">a </a></option>
