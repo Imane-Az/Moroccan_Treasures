@@ -1,6 +1,6 @@
 @extends('Template')
 @section('title')
-Chefchaouen
+Chefchaouen testtt
 @endsection
 @section('footer')
 
