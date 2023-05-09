@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('modePaiement');
             $table->date('datePaiement');
             $table->unsignedBigInteger('idCom');
-            $table->foreign("idCom")->references("NumCom")->on("commandes");
+            
             $table->timestamps();
         });
     }
