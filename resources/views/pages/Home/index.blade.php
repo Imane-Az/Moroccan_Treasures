@@ -142,7 +142,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-search text-primary mb-4" aria-hidden="true" >
+                            <i class="fa-solid fa-magnifying-glass text-primary mb-4">
 
                             </i>
                             <h5>Recherche d'une ville</h5>
@@ -153,9 +153,9 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i  class="fa fa-3x fa-hotel text-primary mb-4" aria-hidden="true"></i>
-                            <h5>Les Hotels</h5>
-                            <p>les hotels de ville qui choisir</p>
+                            <i class="fa-sharp fa-solid fa-hotel text-primary mb-4"></i>
+                            <h5>Les Hotles</h5>
+                            <p>les hotles de ville qui choisir</p>
                         </div>
                     </div>
                 </div>
@@ -342,10 +342,6 @@
         </div>
     </div>
     <!-- Package End -->
-
-
-
-
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
