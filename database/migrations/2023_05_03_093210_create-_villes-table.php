@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id('idV');
             $table->string('nomVille');
             $table->unsignedBigInteger('idE');
-            $table->foreign("idE")->references("idE")->on("endroits");
+            $table->foreign("idE")->references("idE")->on("endroits")->onDelete('cascade');
             $table->timestamps();
         });
     }

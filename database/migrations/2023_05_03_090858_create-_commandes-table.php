@@ -16,9 +16,7 @@ return new class extends Migration
             $table->id('NumCom');
             $table->date('DateComm');
             $table->unsignedBigInteger('idC');
-            $table->unsignedBigInteger('idFac');
             $table->foreign("idC")->references("Cin")->on("clients");
-            $table->foreign("idFac")->references("idfacture")->on("paiement");
             $table->timestamps();
         });
     }

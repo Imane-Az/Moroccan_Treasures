@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Clients;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Commandes extends Model
 {
@@ -11,4 +13,9 @@ class Commandes extends Model
     protected  $table='commandes';
     protected $primaryKey='NumCom';
     protected $fillable=['NumCom','DateComm','PrenomFor','AdresseFor','telFor'];
+
+    public function client()
+    {
+         return $this->belongsTo(Clients::class, "Cin");
+    }
 }
