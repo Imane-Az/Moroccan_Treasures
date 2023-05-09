@@ -36,7 +36,7 @@
 <body>
 
 
-      
+
 
 
     <!-- Navbar & Hero Start -->
@@ -142,7 +142,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa-solid fa-magnifying-glass text-primary mb-4">
+                            <i class="fa fa-3x fa-search text-primary mb-4" aria-hidden="true" >
 
                             </i>
                             <h5>Recherche d'une ville</h5>
@@ -153,16 +153,16 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa-sharp fa-solid fa-hotel text-primary mb-4"></i>
-                            <h5>Les Hotles</h5>
-                            <p>les hotles de ville qui choisir</p>
+                            <i  class="fa fa-3x fa-hotel text-primary mb-4" aria-hidden="true"></i>
+                            <h5>Les Hotels</h5>
+                            <p>les hotels de ville qui choisir</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa-solid fa-utensils text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-hotel text-primary mb-4" aria-hidden="true"></i>
                             <h5>Les Restaurants</h5>
                             <p>Restaurants de la ville</p>
                         </div>
@@ -171,7 +171,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa-sharp fa-solid fa-list"></i>
+                            <i class="fa fa-3x fa-sort text-primary mb-4 " aria-hidden="true"></i>
                             <h5> Les Activités</h5>
                             <p>les activites disponibles </p>
                         </div>
@@ -180,7 +180,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa-sharp fa-solid fa-comment text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-comments text-primary mb-4" aria-hidden="true" ></i>
                             <h5>Espace de Client</h5>
                             <p>les Clients Partage Experience</p>
                         </div>
@@ -189,7 +189,7 @@
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa-solid fa-tree-palm text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-leaf text-primary mb-4 " aria-hidden="true"></i>
                             <h5>Les Coopératives</h5>
                             <p>Les Produits Naturel de la tradition marocaine</p>
                         </div>
