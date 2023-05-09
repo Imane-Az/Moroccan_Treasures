@@ -1,10 +1,12 @@
 /********** Template CSS **********/
 :root {
-    --primary: #86B817; 
+    --primary: #86B817;
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
 }
+
+
 
 .fw-medium {
     font-weight: 600 !important;
@@ -132,7 +134,7 @@
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: #FFFFFF;
