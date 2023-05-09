@@ -10,7 +10,7 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-tDs9T49TCCWpMY8hzvkhfFpntoZnjlK97Ri8SvSvX9+gKep2nWY4DM4vq3i47A/irzQZ6em5AFbK5UYPgygUw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
