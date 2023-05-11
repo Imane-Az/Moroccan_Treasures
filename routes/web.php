@@ -22,6 +22,9 @@ Route::get('/', function () {
 Route::get('/destinations', function () {
     return view('pages/villes/destinations');
 });
+Route::get('/explore',function(){
+    return view('pages.explore');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

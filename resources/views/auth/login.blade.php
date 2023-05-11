@@ -1,10 +1,13 @@
+
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+    
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
@@ -39,9 +42,15 @@
                 </a>
             @endif
 
+            @if (Route::has('register'))
+        <a href="{{ route('register') }}">doesn't have an account</a>
+       @endif
+
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
     </form>
+
 </x-guest-layout>
+

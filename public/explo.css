@@ -1,0 +1,21 @@
+.textt{
+    color:white;
+    border: 1px solid black;
+    margin: auto;
+    
+    border-radius: 20px 20px;
+
+}
+*{
+    justify-content: center;
+    justify-items: center;
+    display: inline-block;
+
+}
+h1{
+   justify-content: center;
+
+}
+.im{
+    display: flex;
+}

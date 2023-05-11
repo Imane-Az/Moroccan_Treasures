@@ -31,16 +31,19 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <meta name="keywords" content="MDIQ">
-    <meta name="description" content="">
+    <!--- template de destination    -->
+        <meta name="keywords" content="MDIQ">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="nicepage.css" media="screen">
+        <link rel="stylesheet" href="Accueil.css" media="screen">
+        <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+        <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+        <meta name="generator" content="Nicepage 5.9.10, nicepage.com">
+        <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+        <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
-    <link rel="stylesheet" href="nicepage.css" media="screen">
- <link rel="stylesheet" href="Accueil.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 5.9.10, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
 </head>
 
 <body>
@@ -60,7 +63,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/" class="nav-item nav-link active">Acceuil</a>
-                    <a href="" class="nav-item nav-link">explore</a>
+                    <a href="/explore" class="nav-item nav-link">explore</a>
                     <a href="/destinations" class="nav-item nav-link">Destinations</a>
                     <a href="" class="nav-item nav-link">Favoris</a>
                     <a href="" class="nav-item nav-link">Community</a>
@@ -72,15 +75,30 @@
                             <a href="" class="dropdown-item">Travel Guides</a>
                         </div>
                     </div>
+
+
+
                 </div>
-                <a href="" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+
+                 @if (Route::has('login'))
+                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                    @else
+
+                          <a href="{{ route('login') }}" class="btn btn-primary">Sign In</a>
+
+
+                    @endauth
+                </div>
+            @endif
+
             </div>
         </nav>
 
        @yield('hero')
     </div>
     <!-- Navbar & Hero End -->
-
 @yield('contenu')
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -162,6 +180,7 @@
         </div>
     </div>
     <!-- Footer End -->
+
 
 
     <!-- Back to Top -->
