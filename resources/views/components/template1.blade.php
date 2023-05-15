@@ -25,6 +25,7 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -51,11 +52,11 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        {{-- Navbar Start --}}
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a href="" class="navbar-brand p-0">
-                {{-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>M-Treasures</h1> --}}
-                <h1 class="text-primary m-0"><img src="pictures/logoPFE.png" alt="Logo" >M-Treasures</h1>
-                <!-- <img src="pictures/logoPFE.png" alt="Logo"> -->
+                <h1 class="text-primary m-0"><img src="pictures/logoPFE.png" alt="Logo" ></h1>
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -68,10 +69,10 @@
                     <a href="" class="nav-item nav-link">Favoris</a>
                     <a href="" class="nav-item nav-link">Community</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Autre service</a>
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Autre service</a>
                         <div class="dropdown-menu m-0">
                             <a href="" class="dropdown-item">Espace Client</a>
-                            <a href="" class="dropdown-item">Contact</a>
+                            <a href="#footer" class="dropdown-item">Contact</a>
                             <a href="" class="dropdown-item">Travel Guides</a>
                         </div>
                     </div>
@@ -79,29 +80,76 @@
 
 
                 </div>
-
-                 @if (Route::has('login'))
+            {{-- LogIn//Dashboard Authentification --}}
+             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-                    @else
+                    <div class="nav-item dropdown " >
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">profile</a>
+                        <div class="dropdown-menu m-0 p-3"  style="position: absolute; right: 0; left: auto;" >
+                            
+                             <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                                  @if (Auth::check() && Auth::user()->UserType == 'admin')
+                                     <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
+                                  @endif
+                                  <a href="" class="dropdown-item">Profile</a>
+                                    <div class="border-t border-gray-200">
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item">
+                                                {{ __('Log Out') }}
+                                            </button>
+                                        </form>
+                                    </div>
+                                
+                              </div>
+                           
 
-                          <a href="{{ route('login') }}" class="btn btn-primary">Sign In</a>
-
-
+                        </div>
+                    </div>
                     @endauth
+                 {{-- @auth
+                   @if (Auth::check() && Auth::user()->UserType == 'admin')
+                      <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
+                   @endif --}}
+                    {{-- user profile /logout --}}
+                   {{-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <div class="px-4 py-3">
+                            <div class="font-medium text-base">{{ Auth::user()->name }}</div>
+                            <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                        </div>
+                        <div class="border-t border-gray-200">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="dropdown-item">
+                                    {{ __('Log Out') }}
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    @endauth --}}
+                 {{-- </div> --}}
+
+                 <div class="ms-auto p-3">
+                    @guest
+                        <a href="{{ route('login') }}" class="btn btn-primary">Sign In</a>
+                    @endguest
+                 </div>
+
                 </div>
             @endif
-
-            </div>
+           
         </nav>
+        {{-- End navbar --}}
 
        @yield('hero')
     </div>
     <!-- Navbar & Hero End -->
 @yield('contenu')
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" id='footer'>
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -197,6 +245,8 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

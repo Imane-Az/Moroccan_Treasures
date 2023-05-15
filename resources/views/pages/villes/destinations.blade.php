@@ -31,29 +31,21 @@ destination
         </nav>
       </div>
     </div>
-        {{-- <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Destination</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Destination</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
     @endsection
     <!-- Navbar & Hero End -->
 
     @section('contenu')
+    <div class="container-xxl py-5">
+      <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+              <h6 class="section-title bg-white text-center text-primary px-3">Destinations</h6>
+              <p class="text-center wow fadeInUp">Le Maroc est un pays magnifique avec des villes qui regorgent de trésors cachés. Les médinas anciennes, les palais somptueux, les jardins luxuriants, les marchés animés et les plages de sable fin sont quelques-unes des merveilles qui vous attendent dans les villes marocaines. Les couleurs, les odeurs, les saveurs et les sons vous transporteront dans un autre monde. Vous pourrez découvrir la richesse culturelle du pays en visitant des lieux historiques, en rencontrant des gens chaleureux et en goûtant une cuisine délicieuse.</p>
+          </div>
+      </div>
+    </div>
     <!-- Destination Start -->
     <div data-home-page="Accueil.html" data-home-page-title="Accueil" class="u-body u-xl-mode" data-lang="fr">
-
+   
         <section class="u-clearfix u-grey-5 u-section-1" id="carousel_692e">
             <div class="u-palette-1-base u-radius-50 u-shape u-shape-round u-shape-1"></div>
             <img class="u-image u-image-round u-radius-50 u-image-1" data-image-width="564" data-image-height="376" src="images/Rabat.jpg" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
@@ -61,10 +53,13 @@ destination
               <div class="u-container-layout u-container-layout-1">
                 <h3 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-1-light-1 u-text-1">Rabat</h3>
                 <p class="u-align-justify u-text u-text-black u-text-2">Rabat is the capital city of Morocco, located on the Atlantic Ocean and the Bou Regreg River. It has a population of over one million people and is the political, economic, and cultural center of the country. Rabat is known for its historic landmarks, such as the Kasbah of the Udayas, the Hassan Tower, and the Chellah Necropolis, which are popular tourist destinations..</p>
-                <a href="https://nicepage.com/joomla-templates" class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">learn more</a>
+                <a href="" class="u-active-palette-2-base u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">learn more</a>
               </div>
             </div>
           </section>
+         
+          
+
           <section class="u-clearfix u-grey-5 u-section-2" id="sec-da20">
             <div class="u-clearfix u-sheet u-sheet-1">
               <div class="u-gradient u-radius-50 u-shape u-shape-round u-shape-1"></div>

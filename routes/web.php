@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserControlleur;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 // ------Home Page------//
 Route::get('/', function () {
     return view('pages/Home/index');
-});
+})->name('home');
 
 // -------Destinations------- //
 Route::get('/destinations', function () {
@@ -26,17 +27,19 @@ Route::get('/explore',function(){
     return view('pages.explore');
 });
 
+//----------Dashboard----------//
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('dashboardcomponents.dashboard');
+})->middleware(['auth', 'verified','admin'])->name('dashboard');
+        //------Users------//
+Route::get('/users',[UserControlleur::class,'showall'])->name('userstable');
 
+//-------------Authentification------------//
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/rabat',function(){
-    return view('Rabat');
-});
+
 require __DIR__.'/auth.php';
