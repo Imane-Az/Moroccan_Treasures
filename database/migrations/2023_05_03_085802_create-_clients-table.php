@@ -14,15 +14,11 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
         Schema::create('clients', function (Blueprint $table) {
-            $table->id('Cin');
-            $table->string('NomClt');
-            $table->string('PrenomClt');
+            $table->unsignedBigInteger('user_id')->primary();
             $table->string('AdresseClt');
             $table->string('telClt');
-            $table->string('Password',60);
-            $table->string('emailClt');
-            $table->string('typeClt')->default('visiteur');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

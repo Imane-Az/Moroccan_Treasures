@@ -19,6 +19,6 @@ class AdminMiddleware
             return redirect()->route('home');
         }
         
-        else return new Response(view('dashboardcomponents.dashboard'));
+        return $next($request);
     }
 }

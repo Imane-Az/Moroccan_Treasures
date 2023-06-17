@@ -11,12 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Activites', function (Blueprint $table) {
+        Schema::disableForeignKeyConstraints();
+        Schema::create('activites', function (Blueprint $table) {
             $table->id('idA');
             $table->string('Type');
             $table->string('Titre');
             $table->string('Prix');
-            $table->string('Information');
+            $table->text('Information');
+            $table->string('image')->nullable();
+            $table->unsignedBigInteger('ville_id');
+            $table->foreign('ville_id')->references('idV')->on('villes')
+            ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

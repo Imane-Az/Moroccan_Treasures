@@ -14,15 +14,23 @@ Home Page
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="display-3 text-white mb-3 animated slideInDown">The beauty of Morocco </h1>
                         <p class="fs-4 text-white mb-4 animated slideInDown">Come with us and discover the hidden gems and rich culture of Morocco.</p>
-                        <div class="position-relative w-75 mx-auto animated slideInDown">
+                        {{-- <div class="position-relative w-75 mx-auto animated slideInDown">
                             <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Rabat">
                             <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
-                        </div>
+                        </div> --}}
+                        <form action="{{ route('searchDestination') }}" method="GET">
+                            <div class="position-relative w-75 mx-auto animated slideInDown d-flex">
+                                <input class="form-control border-0 rounded-pill flex-grow-1 py-3 ps-4 pe-5 me-2" type="text" name="destination" placeholder="Eg: Rabat">
+                                <button type="submit" class="btn btn-primary ">Search</button>
+                            </div>
+                        </form>
+                        
+                          
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+   
 
    
     @endsection
@@ -46,26 +54,6 @@ Home Page
                     <p class="mb-4">Le Maroc est un pays extrêmement diversifié, tant sur le plan culturel que géographique. Situé à la croisée des mondes arabe, africain et européen, le Maroc est riche en traditions, en langues, en religions et en gastronomie. Les villes historiques comme Fès et Marrakech sont des joyaux de l'architecture islamique,
                         tandis que les montagnes de l'Atlas et les vastes étendues du désert offrent des paysages à couper le souffle.</p>
                     <p class="mb-4"> En somme, la diversité est l'une des grandes richesses du Maroc et contribue à en faire une destination fascinante pour les voyageurs du monde entier.</p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Gastronomie</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i> Hotels</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Restaurants</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Activites</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
-                        </div>
-                    </div>
 
                 </div>
             </div>

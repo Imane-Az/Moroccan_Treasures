@@ -3,10 +3,12 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\Clients;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
@@ -21,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'UserType',
     ];
 
     /**
@@ -41,4 +44,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+     /**
+     * Check if the user is an admin.
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function client()
+    {
+        return $this->hasOne(Clients::class);
+    }
 }

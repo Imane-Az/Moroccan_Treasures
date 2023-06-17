@@ -1,0 +1,79 @@
+/* 
+
+
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .destination-details {
+    background-color: #f1f1f1;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .hero-image {
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .destination-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .destination-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .destination-description {
+    font-size: 18px;
+  } */
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .destination-details {
+    background-color: #f1f1f1;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .hero-image {
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .destination-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .destination-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .destination-description {
+    font-size: 18px;
+  }

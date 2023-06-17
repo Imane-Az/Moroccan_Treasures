@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id('NumCom');
             $table->date('DateComm');
             $table->unsignedBigInteger('idC');
-            $table->foreign("idC")->references("Cin")->on("clients");
+            $table->foreign("idC")->references("user_id")->on("clients")->onDelete('cascade');
             $table->timestamps();
         });
     }

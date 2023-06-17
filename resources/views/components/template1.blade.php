@@ -32,6 +32,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    @yield('style')
+    
+   
+
+
     <!--- template de destination    -->
         <meta name="keywords" content="MDIQ">
         <meta name="description" content="">
@@ -43,7 +49,7 @@
         <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
         <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
 
-
+  
 
 </head>
 
@@ -66,14 +72,14 @@
                     <a href="/" class="nav-item nav-link active">Acceuil</a>
                     <a href="/explore" class="nav-item nav-link">explore</a>
                     <a href="/destinations" class="nav-item nav-link">Destinations</a>
-                    <a href="" class="nav-item nav-link">Favoris</a>
-                    <a href="" class="nav-item nav-link">Community</a>
+                    <a href="/travelGuides" class="nav-item nav-link">Travel Guides</a>
+                    <a href="" class="nav-item nav-link">Cooperatives</a>
                     <div class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Autre service</a>
                         <div class="dropdown-menu m-0">
-                            <a href="" class="dropdown-item">Espace Client</a>
-                            <a href="#footer" class="dropdown-item">Contact</a>
-                            <a href="" class="dropdown-item">Travel Guides</a>
+                            <a href="" class="dropdown-item">Favoris</a>
+                            <a href="/contactform" class="dropdown-item">Contact</a>
+                            <a href="" class="dropdown-item">Travel Stories</a>
                         </div>
                     </div>
 
@@ -85,14 +91,16 @@
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
                     @auth
                     <div class="nav-item dropdown " >
-                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">profile</a>
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <div class="dropdown-menu m-0 p-3"  style="position: absolute; right: 0; left: auto;" >
                             
                              <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-                                  @if (Auth::check() && Auth::user()->UserType == 'admin')
+                             
+                                  @if (Auth::check() && trim(Auth::user()->UserType) === 'admin')
                                      <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                                   @endif
-                                  <a href="" class="dropdown-item">Profile</a>
+                                 
+                                  <a href="/profile" class="dropdown-item">Profile</a>
                                     <div class="border-t border-gray-200">
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
@@ -108,29 +116,7 @@
                         </div>
                     </div>
                     @endauth
-                 {{-- @auth
-                   @if (Auth::check() && Auth::user()->UserType == 'admin')
-                      <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
-                   @endif --}}
-                    {{-- user profile /logout --}}
-                   {{-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profile</a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <div class="px-4 py-3">
-                            <div class="font-medium text-base">{{ Auth::user()->name }}</div>
-                            <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-                        </div>
-                        <div class="border-t border-gray-200">
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button type="submit" class="dropdown-item">
-                                    {{ __('Log Out') }}
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    @endauth --}}
-                 {{-- </div> --}}
+                
 
                  <div class="ms-auto p-3">
                     @guest
@@ -149,7 +135,7 @@
     <!-- Navbar & Hero End -->
 @yield('contenu')
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" id='footer'>
+    <div class="container-fluid text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" id='footer'>
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -213,7 +199,7 @@
                         &copy; <a class="border-bottom" href="#">Morroccan Treasures</a>,
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">*Hind/Imane*</a>
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">*Hind❤️ Imane*</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -250,6 +236,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    @yield('scripts')
+
 </body>
 
 </html>

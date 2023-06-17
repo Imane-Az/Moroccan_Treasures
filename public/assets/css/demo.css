@@ -81,6 +81,8 @@
   display: block !important;
 }
 
+
+
 /*
 * Layout demo
 ******************************************************************************/
@@ -109,3 +111,59 @@
 /* .layout-menu{
   background-image: url('pictures/pic3.jpg');
 } */
+
+/* destination */
+
+/********* destinations dashboard ***********/
+
+.description-column {
+  max-width: 300px; /* Adjust the value as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* destination page */
+
+.destination-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.destination-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.destination-card .image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.destination-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.destination-card .description {
+  max-width: 300px;
+  white-space: normal;
+}
+
+.destination-card a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.destination-card a:hover {
+  background-color: #0056b3;
+}
+

@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::create('Villes', function (Blueprint $table) {
+        Schema::create('villes', function (Blueprint $table) {
             $table->id('idV');
             $table->string('nomVille');
-            $table->unsignedBigInteger('idE');
-            $table->foreign("idE")->references("idE")->on("endroits")->onDelete('cascade');
+            $table->string('image');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Villes');
+        Schema::dropIfExists('villes');
     }
 };
